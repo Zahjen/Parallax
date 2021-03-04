@@ -18,7 +18,7 @@ function mouseEnter(evt) {
   // The following loop applies a specific effect to all cards that are not hovered
     for (var j = 0; j < siblings.length; j++) {
         if (siblings[j] !== evt.target) {
-          siblings[j].classList.add('blur');
+          siblings[j].classList.add('opacity');
         }
       }
 
@@ -35,13 +35,13 @@ function mouseEnter(evt) {
 */
 function mouseMove(evt) {
   // To get the xAxis and yAxis, refer to sheme.pdf file.
-    let xAxis = evt.target.offsetWidth /2 + evt.target.offsetLeft + container.offsetLeft - evt.pageX;
-    let yAxis = evt.target.offsetHeight /2 + evt.target.offsetTop + container.offsetTop - evt.pageY;
+    let xAxis = evt.target.offsetWidth / 2 + evt.target.offsetLeft + container.offsetLeft - evt.pageX;
+    let yAxis = evt.target.offsetHeight / 2 + evt.target.offsetTop + container.offsetTop - evt.pageY;
   // We can easily change the following value. It will change the 'deepth' of the parallax. Smaller the value is, higher is the parallax. Let us just precise quotient is not the only factor. Persepective (see css file), xAxis and yAxis play a role too.
     let quotient = 35;
 
   // The targeted card will do a parallax on mouse movement
-    evt.target.style.transform = `rotateX(${yAxis/quotient}deg) rotateY(${- xAxis/quotient}deg)`;
+    evt.target.style.transform = `rotateX(${yAxis / quotient}deg) rotateY(${- xAxis / quotient}deg)`;
 
   // Title (here h1) of the targeted card will 'go out' of the card by translating 40px 
     evt.target.children[0].style.transform = `translateZ(40px)`;
