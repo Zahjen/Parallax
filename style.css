@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(58, 58, 58);
+    font-family: 'Poppins', sans-serif;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    perspective: 1200px;
+}
+
+.container .card {
+    transform-style: preserve-3d;
+    background-color: rgba(255,255,255,0.1);
+    color: rgba(255, 255, 255, 0.7);
+    text-align: justify;
+    padding: 30px;
+    max-width: 400px;
+    height: auto;
+    margin: 20px;
+    -webkit-box-shadow: 0px 12px 23px -4px rgba(0,0,0,0.3);
+    box-shadow: 0px 12px 23px -4px rgba(0,0,0,0.3);
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.card > * {
+    pointer-events: none;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+}
+
+.opacity {
+    opacity: 0.5;
+    transform: rotateX(0deg) rotateY(0deg);
+    -webkit-transform: rotateX(0deg) rotateY(0deg);
+    -moz-transform: rotateX(0deg) rotateY(0deg);
+    -ms-transform: rotateX(0deg) rotateY(0deg);
+    -o-transform: rotateX(0deg) rotateY(0deg);
+}
+
+  
